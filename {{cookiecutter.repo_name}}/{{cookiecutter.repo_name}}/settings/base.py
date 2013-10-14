@@ -1,4 +1,5 @@
 import sys
+import os
 from os.path import join, abspath, dirname
 
 # PATH vars
@@ -19,11 +20,11 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '{{cookiecutter.repo_name}}',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'ENGINE': 'django.db.backends.{{cookiecutter.db_backend}}',
+        'NAME': '{{cookiecutter.db_name}}',
+        'USER': '{{cookiecutter.db_user}}',
+        'PASSWORD': '{{cookiecutter.db_password}}',
+        'HOST': '{{cookiecutter.db_host}}', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
 }
@@ -36,11 +37,11 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = '{{cookiecutter.time_zone}}'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = '{{cookiecutter.language_code}}'
 
 SITE_ID = 1
 
@@ -86,8 +87,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'CHANGE THIS!!!'
+# Set this as an environment variable. This is to keep it out of version control.
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
