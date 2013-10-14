@@ -6,12 +6,12 @@
     "description": "A short description of the project.",
     "year": "Current year",
     "domain_name": "Domain name",
-	"db_backend": "postgresql_psycopg2",
-	"db_name": "database_name",
-	"db_user": "dbuser",
-	"db_password": "dbpassword",
-	"db_host": "localhost",
-	"db_port": "3306",
-	"time_zone": "America/New_York",
-	"language_code": "en-US"
+    "db_backend": "postgresql_psycopg2",
+    "db_name": "database_name",
+    "db_user": "dbuser",
+    "db_password": "dbpassword",
+    "db_host": "localhost",
+    "db_port": "3306",
+    "time_zone": "America/New_York",
+    "language_code": "en-US"
 }
