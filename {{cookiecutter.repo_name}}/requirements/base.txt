@@ -5,6 +5,8 @@
 django
 
 django-model-utils
+django-floppyforms
+django-crispy-forms
 
 psycopg2
 South
