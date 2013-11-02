@@ -8,6 +8,8 @@ django-model-utils
 django-floppyforms
 django-crispy-forms
 
+# database related
+MySQL-python
 psycopg2
 South
 
