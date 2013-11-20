@@ -26,3 +26,11 @@ Now run it against this repo::
 
 You'll be prompted for some questions, answer them, then it will create a Django 
 skeleton project for you.
+
+Notes
+-----
+
+* Put secret key inside the virtual environment bin/postactivate script
+
+    export SECRET_KEY="blah"
+
